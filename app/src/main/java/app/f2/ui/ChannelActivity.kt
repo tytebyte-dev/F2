@@ -4,11 +4,10 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import app.f2.R
 import app.f2.data.GameRepository
 
-class ChannelActivity : AppCompatActivity() {
+class ChannelActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

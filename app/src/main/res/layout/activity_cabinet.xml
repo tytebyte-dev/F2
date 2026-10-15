@@ -2,13 +2,16 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="false">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:paddingBottom="24dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -70,6 +73,7 @@
             android:id="@+id/btnRecord"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:text="Записать видеоролик"
             android:layout_marginBottom="8dp" />
 
@@ -77,6 +81,7 @@
             android:id="@+id/btnMarket"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:text="Рынок"
             android:layout_marginBottom="6dp" />
 
@@ -84,6 +89,7 @@
             android:id="@+id/btnChannel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:text="О канале"
             android:layout_marginBottom="6dp" />
 
@@ -91,6 +97,7 @@
             android:id="@+id/btnAchievements"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:text="Достижения"
             android:layout_marginBottom="6dp" />
 
@@ -98,6 +105,7 @@
             android:id="@+id/btnSettings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:text="Настройка канала"
             android:layout_marginBottom="6dp" />
     </LinearLayout>

@@ -5,6 +5,7 @@
     android:orientation="horizontal"
     android:padding="8dp"
     android:layout_marginBottom="8dp"
+    android:gravity="center_vertical"
     android:background="?attr/selectableItemBackground">
 
     <ImageView
@@ -19,8 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:orientation="vertical"
-        android:layout_marginStart="12dp"
-        android:layout_gravity="center_vertical">
+        android:layout_marginStart="12dp">
 
         <TextView
             android:id="@+id/tvName"
@@ -46,7 +46,8 @@
         android:id="@+id/btnBuy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:minWidth="88dp"
         android:text="Купить"
-        android:layout_gravity="center_vertical"
         android:textSize="12sp" />
 </LinearLayout>

@@ -6,12 +6,11 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import app.f2.R
 import app.f2.data.GameCatalog
 import app.f2.data.GameRepository
 
-class AchievementsActivity : AppCompatActivity() {
+class AchievementsActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -9,13 +9,12 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import app.f2.R
 import app.f2.data.Equipment
 import app.f2.data.GameCatalog
 import app.f2.data.GameRepository
 
-class MarketActivity : AppCompatActivity() {
+class MarketActivity : BaseActivity() {
 
     private lateinit var repo: GameRepository
     private lateinit var container: LinearLayout

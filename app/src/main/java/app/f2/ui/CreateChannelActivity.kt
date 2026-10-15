@@ -7,11 +7,10 @@ import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import app.f2.R
 import app.f2.data.GameRepository
 
-class CreateChannelActivity : AppCompatActivity() {
+class CreateChannelActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

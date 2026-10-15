@@ -7,12 +7,11 @@ import android.os.Looper
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import app.f2.R
 import app.f2.data.GameRepository
 import app.f2.data.Player
 
-class CabinetActivity : AppCompatActivity() {
+class CabinetActivity : BaseActivity() {
 
     private lateinit var repo: GameRepository
     private lateinit var tvChannel: TextView

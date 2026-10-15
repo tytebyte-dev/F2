@@ -9,6 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.F2">
 
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
