@@ -29,26 +29,26 @@ object GameCatalog {
 
     val computers = listOf(
         Equipment(1, "Старый ПК", 0.0, 0, "artline"),
-        Equipment(2, "Lenovo IdeaCentre", 150.0, 60, "Lenovo"),
-        Equipment(3, "ASRock DeskMini", 350.0, 120, "ASRock"),
-        Equipment(4, "Apple Mac Mini", 800.0, 240, "Apple"),
+        Equipment(2, "Lenovo IdeaCentre", 150.0, 60, "lenovo"),
+        Equipment(3, "ASRock DeskMini", 350.0, 120, "asrock"),
+        Equipment(4, "Apple Mac Mini", 800.0, 240, "apple"),
         Equipment(5, "Artline Gaming", 1200.0, 360, "artline")
     )
 
     val cameras = listOf(
-        Equipment(1, "Веб-камера", 0.0, 0, "Ulanzi"),
-        Equipment(2, "Ulanzi Webcam", 80.0, 50, "Ulanzi"),
-        Equipment(3, "JVC Compact", 200.0, 120, "JVC"),
-        Equipment(4, "Action Camera", 350.0, 200, "ActionCamera"),
-        Equipment(5, "SportsCam Pro", 600.0, 350, "SportsCam")
+        Equipment(1, "Веб-камера", 0.0, 0, "ulanzi"),
+        Equipment(2, "Ulanzi Webcam", 80.0, 50, "ulanzi"),
+        Equipment(3, "JVC Compact", 200.0, 120, "jvc"),
+        Equipment(4, "Action Camera", 350.0, 200, "actioncamera"),
+        Equipment(5, "SportsCam Pro", 600.0, 350, "sportscam")
     )
 
     val microphones = listOf(
         Equipment(1, "Встроенный микрофон", 0.0, 0, "mic_generic"),
-        Equipment(2, "Esperanza Mic", 40.0, 15, "Esperanza"),
-        Equipment(3, "Real-El Studio", 120.0, 40, "Real_El"),
-        Equipment(4, "Noisy Pro", 280.0, 80, "Noisy"),
-        Equipment(5, "YW-001 Condenser", 500.0, 150, "YW_001")
+        Equipment(2, "Esperanza Mic", 40.0, 15, "esperanza"),
+        Equipment(3, "Real-El Studio", 120.0, 40, "real_el"),
+        Equipment(4, "Noisy Pro", 280.0, 80, "noisy"),
+        Equipment(5, "YW-001 Condenser", 500.0, 150, "yw_001")
     )
 
     val videoThemes = listOf(
