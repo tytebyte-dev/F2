@@ -17,6 +17,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".ui.CreateChannelActivity" android:exported="false" />
+        <activity android:name=".ui.CabinetActivity" android:exported="false" />
+        <activity android:name=".ui.MarketActivity" android:exported="false" />
+        <activity android:name=".ui.ChannelActivity" android:exported="false" />
+        <activity android:name=".ui.AchievementsActivity" android:exported="false" />
+        <activity android:name=".ui.SettingsActivity" android:exported="false" />
     </application>
 
 </manifest>

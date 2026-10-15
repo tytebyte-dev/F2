@@ -1,28 +1,33 @@
-# F2
+# Симулятор жизни Ютубера (офлайн)
 
-Заготовка Android-приложения с пустой страницей.
+Полноценное офлайн Android-приложение на Kotlin, перенесённое из веб-игры «Симулятор жизни Ютубера» (bloger.icu).
 
-## Настройка
+## Что перенесено
 
-Все параметры приложения лежат в [`f2.properties`](f2.properties):
+- Создание канала (название + пол)
+- Кабинет: подписчики, просмотры, аудитория, деньги
+- Запись видеороликов с кулдауном (900 сек − бонус ПК)
+- Случайный доход, подписчики и просмотры с учётом бонусов оборудования и темы канала
+- Рынок: компьютеры (уменьшают кулдаун), камеры (+просмотры), микрофоны (+подписчики)
+- О канале: статистика видео по темам, имущество
+- Достижения (кнопки YouTube по подписчикам)
+- Настройки: переименование, покупка тем канала, сброс прогресса
+- Локальное сохранение (SharedPreferences) — полностью офлайн
 
-| Ключ | Назначение |
-|---|---|
-| `APP_NAME` | название приложения (`app_name`) |
-| `PACKAGE_NAME` | `applicationId` |
-| `VERSION_NAME` | версия release-сборки |
-| `PRE_VERSION_NAME` | версия debug (пре-релиз) сборки |
-| `VERSION_CODE` | `versionCode` |
+## Тема приложения
 
-## Темы
-
-- Android 11+ (API 30+): `Theme.Material3.DayNight.NoActionBar` (`values-v30`)
-- Android 10 и ниже: `Theme.MaterialComponents.DayNight.NoActionBar.Bridge` (`values`)
+Сохранена исходная тема шаблона F2:
+- Android 11+: `Theme.Material3.DayNight.NoActionBar`
+- Android 10−: `Theme.MaterialComponents.DayNight.NoActionBar.Bridge`
 
 ## Сборка
 
 ```
-./gradlew assembleDebug assembleRelease
+./gradlew assembleDebug
 ```
 
-GitHub Actions (`.github/workflows/build-private.yml`) собирает APK и кэширует Gradle (зависимости, build cache) и промежуточные результаты сборки.
+APK появится в `app/build/outputs/apk/debug/`.
+
+## Ассеты
+
+Изображения оборудования и достижений взяты из оригинального архива веб-игры.
