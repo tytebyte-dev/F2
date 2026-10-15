@@ -1,0 +1,68 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Прочитать f2.properties
+        id: props
+        run: |
+          set -eu
+          while IFS='=' read -r key value; do
+            case "$key" in
+              APP_NAME|PACKAGE_NAME|VERSION_NAME|PRE_VERSION_NAME|VERSION_CODE)
+                echo "$key=$value" >> "$GITHUB_OUTPUT" ;;
+            esac
+          done < f2.properties
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      # Кэш слой 1: зависимости Gradle, wrapper и build cache (~/.gradle)
+      - name: Setup Gradle (cache)
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-read-only: ${{ github.ref != 'refs/heads/main' }}
+
+      # Кэш слой 2: промежуточные результаты сборки модулей
+      - name: Cache build intermediates
+        uses: actions/cache@v4
+        with:
+          path: |
+            .gradle/configuration-cache
+            app/build/intermediates
+            app/build/tmp/kotlin-classes
+          key: build-${{ runner.os }}-${{ hashFiles('**/*.gradle.kts', 'gradle.properties', 'f2.properties', 'app/src/**') }}
+          restore-keys: |
+            build-${{ runner.os }}-
+
+      - name: Assemble
+        run: ./gradlew --build-cache assembleDebug assembleRelease
+
+      - name: Upload debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.props.outputs.APP_NAME }}-${{ steps.props.outputs.PRE_VERSION_NAME }}-debug
+          path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
+
+      - name: Upload release APK (unsigned)
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.props.outputs.APP_NAME }}-${{ steps.props.outputs.VERSION_NAME }}-release-unsigned
+          path: app/build/outputs/apk/release/*.apk
+          if-no-files-found: error

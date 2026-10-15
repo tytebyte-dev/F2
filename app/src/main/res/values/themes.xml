@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android 10 и ниже (API < 30): Material Components Bridge -->
+    <style name="Theme.F2" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <item name="colorPrimary">@color/f2_primary</item>
+        <item name="colorOnPrimary">@color/f2_on_primary</item>
+        <item name="colorPrimaryVariant">@color/f2_primary_variant</item>
+        <item name="colorSecondary">@color/f2_primary</item>
+        <item name="colorOnSecondary">@color/f2_on_primary</item>
+    </style>
+</resources>
