@@ -35,9 +35,9 @@ data class Player(
     fun channelTheme(): ChannelTheme =
         GameCatalog.channelThemes.find { it.id == channelThemeId } ?: GameCatalog.channelThemes[0]
 
-    /** Базовый кулдаун 900 сек минус бонус компьютера */
+    /** Базовый кулдаун 120 сек (2 мин) минус бонус компьютера, минимум 60 сек */
     fun cooldownSeconds(): Int {
-        val base = 900
+        val base = 120
         val bonus = computer().bonus
         return (base - bonus).coerceAtLeast(60)
     }

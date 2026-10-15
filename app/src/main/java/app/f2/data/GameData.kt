@@ -29,10 +29,10 @@ object GameCatalog {
 
     val computers = listOf(
         Equipment(1, "Старый ПК", 0.0, 0, "artline"),
-        Equipment(2, "Lenovo IdeaCentre", 150.0, 60, "lenovo"),
-        Equipment(3, "ASRock DeskMini", 350.0, 120, "asrock"),
-        Equipment(4, "Apple Mac Mini", 800.0, 240, "apple"),
-        Equipment(5, "Artline Gaming", 1200.0, 360, "artline")
+        Equipment(2, "Lenovo IdeaCentre", 150.0, 20, "lenovo"),
+        Equipment(3, "ASRock DeskMini", 350.0, 40, "asrock"),
+        Equipment(4, "Apple Mac Mini", 800.0, 50, "apple"),
+        Equipment(5, "Artline Gaming", 1200.0, 60, "artline")
     )
 
     val cameras = listOf(
