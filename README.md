@@ -25,4 +25,4 @@
 ./gradlew assembleDebug assembleRelease
 ```
 
-GitHub Actions (`.github/workflows/build.yml`) собирает APK и кэширует Gradle (зависимости, build cache) и промежуточные результаты сборки.
+GitHub Actions (`.github/workflows/build-private.yml`) собирает APK и кэширует Gradle (зависимости, build cache) и промежуточные результаты сборки.
